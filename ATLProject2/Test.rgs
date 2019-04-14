@@ -1,0 +1,26 @@
+HKCR
+{
+	TestID.1 = s 'Test Class'
+	{
+		CLSID = s '{060FA8F2-43A2-4C1B-B7B7-3BEDB3D4AA5A}'
+	}
+	TestID = s 'Test Class'
+	{		
+		CurVer = s 'TestID.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {060FA8F2-43A2-4C1B-B7B7-3BEDB3D4AA5A} = s 'Test Class'
+		{
+			ProgID = s 'TestID.1'
+			VersionIndependentProgID = s 'TestID'
+			ForceRemove Programmable
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			TypeLib = s '{BD1B3796-457D-43BB-8265-3BCFC05CE270}'
+			Version = s '1.0'
+		}
+	}
+}
