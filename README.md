@@ -12,3 +12,6 @@ use "regsvr32.exe your_COM_dll_path" to register the COM, then remove the path r
 You will find a new COM named the same as the project. Add it, and run the C# project.
 
 compile.bat run.bat clean.bat files are provided.
+
+A Fake version of ATL implemented on Linux use pure C++ in both Server and Client is provided here: https://github.com/xwang186/FakeATLonLinux
+Linux does not have COM, but the fake implementation can be helpful in deeply understanding how COM works.
